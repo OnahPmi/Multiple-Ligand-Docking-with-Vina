@@ -2,13 +2,6 @@
 
 This repository provides standalone executables for preparing ligands and performing multi-ligand docking using AutoDock Vina.
 
-## Contents
-
-- **`obabel_prep_ligands`**: Executable for preparing ligands.
-- **`vina_dock_multi_ligands`**: Executable for docking ligands with AutoDock Vina.
-- **`config.txt`**: Sample configuration file for docking.
-- **`README.md`**: This file, providing instructions on how to use the executables.
-
 ## Instructions
 
 ### 1. Ligand Preparation
@@ -16,7 +9,7 @@ This repository provides standalone executables for preparing ligands and perfor
 **Using `obabel_prep_ligands`**
 
 1. **Setup:**
-   - Download the `obabel_prep_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multi-Ligands-Docking-With-Vina/releases).
+   - Download the `obabel_prep_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multiple-Ligand-Docking-with-Vina/releases/tag/v1.0.0).
    - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder.
    - For ligand preparation from a single file:
      - Place your SDF file (e.g., `raw_ligand.sdf`) in the same folder as the executable.
@@ -52,7 +45,7 @@ This repository provides standalone executables for preparing ligands and perfor
 **Using `vina_dock_multi_ligands`**
 
 1. **Setup:**
-   - Download the `vina_dock_multi_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multi-Ligands-Docking-With-Vina/releases).
+   - Download the `vina_dock_multi_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multiple-Ligand-Docking-with-Vina/releases/tag/v1.0.0).
    - Ensure that AutoDock Vina is installed and added to your system path variables.
    - Ensure that the `receptor name`, `binding pocket coordinates and sizes`, `exhaustiveness`, etc., are contained in the `config.txt` file.
    - Place the `vina_dock_multi_ligands` executable, the prepared protein (e.g. `protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder in the same directory.
