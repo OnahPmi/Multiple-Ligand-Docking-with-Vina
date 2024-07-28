@@ -19,10 +19,15 @@ This example demonstrates how to use the `obabel_prep_ligands` executable to pre
    - Open your terminal in this directory.
 
 3. **Run the Executable**:
-   - Run the following command:
-     ```bash
-     ./obabel_prep_ligands
-     ```
+   - Run the following command:'
+     - On Windows:
+       ```bash
+       obabel_prep_ligands.exe
+       ```
+     - On macOS/Linux:
+       ```bash
+       ./obabel_prep_ligands
+       ```
    - When prompted:
      - For the question "Are your ligands contained in a single file [y/n]?", type `y` or `yes`.
      - For the prompt "Input name of ligands file," type the name of the ligand file (e.g., `raw_ligand.sdf`) and hit enter.
@@ -50,14 +55,18 @@ This example demonstrates how to use the `vina_dock_multi_ligands` executable to
    - Open your terminal in this directory.
 
 3. **Run the Executable**:
-   - Run the following command:
-     ```bash
-     ./vina_dock_multi_ligands
-     ```
+     - On Windows:
+       ```bash
+       vina_dock_multi_ligands.exe
+       ```
+     - On macOS/Linux:
+       ```bash
+       ./vina_dock_multi_ligands
+     
    - When prompted:
      - For the question "Input path to ligands directory:", type the name of the prepared ligands folder (e.g., `prepared_ligands`) and hit enter.
 
-4. **Completion**:
+5. **Completion**:
    - Once the docking is complete, a new folder named `docking_results` will be created.
    - This folder will contain the docking results and the log files.
 
