@@ -1,24 +1,30 @@
 # Multi Ligands Docking with AutoDock Vina
 
-### This repository contains Python scripts and executables for preparing ligands and performing multi-ligand docking (virtual screening) with AutoDock Vina.
+This repository provides standalone executables for preparing ligands and performing multi-ligand docking using AutoDock Vina.
 
-## Step 1: Ligand Preparation with Open Babel
+## Contents
 
-### Ligand Preparation from a Single File
+- **`obabel_prep_ligands`**: Executable for preparing ligands.
+- **`vina_dock_multi_ligands`**: Executable for docking ligands with AutoDock Vina.
+- **`config.txt`**: Sample configuration file for docking.
+- **`README.md`**: This file, providing instructions on how to use the executables.
 
-This example demonstrates how to use the `obabel_prep_ligands` executable to prepare ligands contained in a single SDF file named `raw_ligand.sdf` for docking using AutoDock Vina.
+## Instructions
 
-### Steps
+### 1. Ligand Preparation
 
-1. **Setup**:
+**Using `obabel_prep_ligands`**
+
+1. **Setup:**
    - Download the `obabel_prep_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multi-Ligands-Docking-With-Vina/releases).
-   - Ensure that Open Babel (obabel) is installed and added to the system path variables.
+   - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder.
+   - For ligand preparation from a single file:
+     - Place your SDF file (e.g., `raw_ligand.sdf`) in the same folder as the executable.
+   - For ligand preparation from multiple files:
+     - Place all ligand files (e.g., `.mol2`, `.pdb`, `.sdf`) in a folder (e.g. `raw_ligands` folder) and place the folder in the same diretory as the executable.
 
-2. **Prepare the Environment**:
-   - Place the `obabel_prep_ligands` executable and the `raw_ligand.sdf` file in the same directory.
-   - Open your terminal in this directory.
-
-3. **Run the Executable**:
+2. **Run the Executable:**
+   - Open a terminal or command prompt in the folder containing `obabel_prep_ligands`.
    - Run the following command:'
      - On Windows:
        ```bash
@@ -28,9 +34,11 @@ This example demonstrates how to use the `obabel_prep_ligands` executable to pre
        ```bash
        ./obabel_prep_ligands
        ```
-   - When prompted:
-     - For the question "Are your ligands contained in a single file [y/n]?", type `y` or `yes`.
-     - For the prompt "Input name of ligands file," type the name of the ligand file (e.g., `raw_ligand.sdf`) and hit enter.
+
+3. **Follow the Prompts:**
+   - For the question "Are your ligands contained in a single file [y/n]?", type `y` if the contained in a single file or `n` if not.
+   - For a single file, enter the name of your ligand file when prompted. E.g., `raw_ligand.sdf`
+   - For multiple files, specify the folder containing your ligand files. E.g., `raw_ligands`
 
 4. **Completion**:
    - Once the conversion is complete, a new folder named `prepared_ligands` will be created.
@@ -39,22 +47,19 @@ This example demonstrates how to use the `obabel_prep_ligands` executable to pre
 ### Notes
 - Verify that both `obabel_prep_ligands` and `raw_ligand.sdf` are in the same directory for the executable to work correctly.
 
-## Step 2: Multi-ligand Docking with AutoDock Vina
+### 2. Docking Ligands
 
-This example demonstrates how to use the `vina_dock_multi_ligands` executable to perform docking of ligands contained in a folder called `prepared_ligands`.
+**Using `vina_dock_multi_ligands`**
 
-### Steps
-
-1. **Setup**:
+1. **Setup:**
    - Download the `vina_dock_multi_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multi-Ligands-Docking-With-Vina/releases).
    - Ensure that AutoDock Vina is installed and added to your system path variables.
    - Ensure that the `receptor name`, `binding pocket coordinates and sizes`, `exhaustiveness`, etc., are contained in the `config.txt` file.
+   - Place the `vina_dock_multi_ligands` executable, the prepared protein (e.g. `protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder in the same directory.
 
-2. **Prepare the Environment**:
-   - Place the `vina_dock_multi_ligands` executable, the prepared protein (named `protein.pdbqt` in this example), `config.txt` file, and the `prepared_ligands` folder in the same directory.
-   - Open your terminal in this directory.
-
-3. **Run the Executable**:
+2. **Run the Executable:**
+   - Open a terminal or command prompt in the folder containing `vina_dock_multi_ligands`.
+   - Execute the file:
      - On Windows:
        ```bash
        vina_dock_multi_ligands.exe
@@ -62,13 +67,27 @@ This example demonstrates how to use the `vina_dock_multi_ligands` executable to
      - On macOS/Linux:
        ```bash
        ./vina_dock_multi_ligands
-     
-   - When prompted:
-     - For the question "Input path to ligands directory:", type the name of the prepared ligands folder (e.g., `prepared_ligands`) and hit enter.
+       ```
 
-5. **Completion**:
+3. **Follow the Prompts:**
+    - For the question "Input path to ligands directory:", type the name of the prepared ligands folder (e.g., `prepared_ligands`) and hit enter.
+
+4. **Completion:**
    - Once the docking is complete, a new folder named `docking_results` will be created.
    - This folder will contain the docking results and the log files.
 
 ### Notes
 - Verify that `vina_dock_multi_ligands`, the prepared protein (`protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder are in the same directory for the executable to work correctly.
+
+## Requirements
+
+- **Operating System**: The executables are compatible with Windows, macOS, and Linux.
+- **Dependencies**: The executables are standalone and do not require additional dependencies.
+
+## Support
+
+For issues or support, please contact [onahemma111@gmail.com].
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
