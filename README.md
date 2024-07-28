@@ -73,7 +73,7 @@ This repository provides standalone executables for preparing ligands and perfor
 
 ## Support
 
-For issues or support, please contact [your contact information].
+For issues or support, please contact [onahemma111@gmail.com].
 
 ## License
 
