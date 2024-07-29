@@ -14,7 +14,7 @@ This repository provides standalone executables for preparing ligands and perfor
    - For ligand preparation from a single file:
      - Place your SDF file (e.g., `raw_ligand.sdf`) in the same folder as the executable.
    - For ligand preparation from multiple files:
-     - Place all ligand files (e.g., `.mol2`, `.pdb`, `.sdf`) in a folder (e.g. `raw_ligands` folder) and place the folder in the same diretory as the executable.
+     - Place all ligand files (e.g., `.mol2`, `.pdb`, `.sdf`) in a folder (e.g. `raw_ligands` folder) and place the folder in the same directory as the executable.
 
 2. **Run the Executable:**
    - Open a terminal or command prompt in the folder containing `obabel_prep_ligands`.
