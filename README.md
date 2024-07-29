@@ -4,7 +4,7 @@ This repository provides standalone executables for preparing ligands and perfor
 
 ## Instructions
 
-#### To use the executables, Download the `obabel_prep_ligands` executable from the [Releases page](https://github.com/OnahPmi/Multiple-Ligand-Docking-with-Vina/releases/tag/v1.0.0).
+#### To use the executables, Download from the [Releases page](https://github.com/OnahPmi/Multiple-Ligand-Docking-with-Vina/releases/tag/v1.0.0).
 
 ### 1. Ligand Preparation
 
