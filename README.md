@@ -8,17 +8,18 @@
 
 ### 1. Ligand Preparation
 
-**Using the `obabel_prep_ligands` executable**
+**Using the `obabel_prep_ligands.exe` executable**
 
 1. **Setup:**
-   - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder or add the directory of the executable to your system path variable.
+   - Ensure that Open Babel is installed and added to your system path variables.
+   - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder or add the directory of the executable to your system path variables.
    - For ligand preparation from a single file:
      - Place your SDF file (e.g., `raw_ligand.sdf`) in the same folder as the executable.
    - For ligand preparation from multiple files:
      - Place all ligand files (e.g., `.mol2`, `.pdb`, `.sdf`) in a folder (e.g. `raw_ligands` folder) and place the folder in the same directory as the executable.
 
-2. **Run the Executable:**
-   - Open a terminal or command prompt in the folder containing `obabel_prep_ligands`.
+3. **Run the Executable:**
+   - Open a terminal or command prompt in the folder containing the ligand files or ligands folder.
    - Run the following command:'
      - On Windows:
        ```bash
@@ -28,13 +29,13 @@
        ```bash
        ./obabel_prep_ligands
        ```
-
-3. **Follow the Prompts:**
+       
+4. **Follow the Prompts:**
    - For the question "Are your ligands contained in a single file [y/n]?", type `y` if the contained in a single file or `n` if not.
    - For a single file, enter the name of your ligand file when prompted. E.g., `raw_ligand.sdf`
    - For multiple files, specify the folder containing your ligand files. E.g., `raw_ligands`
 
-4. **Completion**:
+5. **Completion**:
    - Once the conversion is complete, a new folder named `prepared_ligands` will be created.
    - This folder will contain the prepared ligands in PDBQT format.
 
@@ -43,16 +44,16 @@
 
 ### 2. Docking Ligands
 
-**Using the `vina_dock_multi_ligands` executable**
+**Using the `vina_dock_multi_ligands.exe` executable**
 
 1. **Setup:**
    - Ensure that AutoDock Vina is installed and added to your system path variables.
    - Ensure that the `receptor name`, `binding pocket coordinates and sizes`, `exhaustiveness`, etc., are contained in the `config.txt` file.
    - Place the `vina_dock_multi_ligands` executable, the prepared protein (e.g. `protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder in the same directory.
-   - Alternatively, add the directory of the executable to your system path variable to be able to run it from any folder without placing it in the folder.
+   - Alternatively, add the directory of the executable to your system path variables to be able to run it from any folder without placing it in the folder.
 
 2. **Run the Executable:**
-   - Open a terminal or command prompt in the folder containing `vina_dock_multi_ligands`.
+   - Open a terminal or command prompt in the folder containing the `prepared proteins`, `prepared ligands` and `config.txt file`.
    - Execute the file:
      - On Windows:
        ```bash
