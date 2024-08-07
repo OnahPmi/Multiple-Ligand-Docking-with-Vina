@@ -11,7 +11,7 @@
 **Using the `obabel_prep_ligands` executable**
 
 1. **Setup:**
-   - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder.
+   - Ensure the executable `obabel_prep_ligands` and your ligand file are in the same folder or add the directory of the executable to your system path variable.
    - For ligand preparation from a single file:
      - Place your SDF file (e.g., `raw_ligand.sdf`) in the same folder as the executable.
    - For ligand preparation from multiple files:
@@ -49,6 +49,7 @@
    - Ensure that AutoDock Vina is installed and added to your system path variables.
    - Ensure that the `receptor name`, `binding pocket coordinates and sizes`, `exhaustiveness`, etc., are contained in the `config.txt` file.
    - Place the `vina_dock_multi_ligands` executable, the prepared protein (e.g. `protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder in the same directory.
+   - Alternatively, add the directory of the executable to your system path variable to be able to run it from any folder without placing it in the folder.
 
 2. **Run the Executable:**
    - Open a terminal or command prompt in the folder containing `vina_dock_multi_ligands`.
