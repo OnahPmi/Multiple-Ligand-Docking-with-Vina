@@ -1,6 +1,6 @@
 # Multi Ligands Docking with AutoDock Vina
 
-### This repository provides standalone executables (`obabel_prep_ligands` and `vina_dock_multi_ligands`) for preparing ligands and performing multi-ligand docking using AutoDock Vina.
+### This repository provides standalone executables (`obabel_prep_ligands.exe` and `vina_dock_multi_ligands.exe`) for preparing ligands and performing multi-ligand docking using AutoDock Vina.
 
 # Instructions
 
