@@ -40,7 +40,7 @@
    - This folder will contain the prepared ligands in PDBQT format.
 
 ### Notes
-- Verify that both `obabel_prep_ligands` and `raw_ligand.sdf` are in the same directory for the executable to work correctly.
+- Verify that both `obabel_prep_ligands.exe` (if not added to system path variables) and `raw_ligand.sdf` are in the same directory for the executable to work correctly.
 
 ### 2. Docking Ligands
 
@@ -72,7 +72,7 @@
    - This folder will contain the docking results and the log files.
 
 ### Notes
-- Verify that `vina_dock_multi_ligands`, the prepared protein (`protein.pdbqt`), `config.txt` file, and the `prepared_ligands` folder are in the same directory for the executable to work correctly.
+- Verify that the `prepared protein` (if not added to system path variables), `config.txt` file, and the `prepared_ligands` folder are in the same directory for the executable to work correctly.
 
 ## Requirements
 
